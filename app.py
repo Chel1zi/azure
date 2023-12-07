@@ -3,39 +3,39 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-@app.route('/index')
-def index():
-    return render_template('index.html')
 
-@app.route('/')
-def hello_world(): 
-    return 'Hello World!'
-
-@app.route('/api/mydata', methods=['GET'])
-def api_mydata():
-    data = get_data()
-    return jsonify(data)
-
-
-@app.route('/city/<name>')
-def city(name):
-    with open('static/us-cities.csv', 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row['city'] == name:
-                return render_template('city.html', **row)
-        return "City not found", 404
-
-def get_data():
-    data = []
+# 这是读取csv文件的方法
+def read_csv():
+    csv_data = []
     with open('static/amazon-reviews.csv', 'r') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            data.append(row)
-    return data
+        csv_file = csv.DictReader(f)
+        for data in csv_file:
+            csv_data.append(data)
+    return csv_data
 
 
+@app.route('/dashBoard')
+def dashBoard():
+    return render_template('dashBoard.html')
 
+@app.route('/cityInfo')
+def cityInfo():
+    return render_template('cityInfo.html')
+
+@app.route('/readCSVFile', methods=['GET'])
+def readCSVFile():
+    csv_data = read_csv()
+    return jsonify(csv_data)
+
+# 读取城市信息
+@app.route('/readCityInfo/<city>')
+def readCityInfo(city):
+    with open('static/us-cities.csv', 'r') as f:
+        info = csv.DictReader(f)
+        for i in info:
+            if i['city'] == city:
+                return render_template('cityInfo.html', **i)
+        return None
 
 if __name__ == '__main__':
     app.run()
