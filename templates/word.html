@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word APIs Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .api-form {
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <p>Li Xiang and Li Zhicheng</p>
+    <p>76394 and 76406</p>
+    <img src="../static/Li.JPG" alt="LiXiang" width="100">
+    <img src="../static/Li2.JPG" alt="LiZhicheng" width="100">
+</div>
+
+<!-- Popular Words API -->
+<div class="api-form">
+    <h3>Popular Words</h3>
+    <input type="text" id="city" placeholder="City Name">
+    <input type="number" id="limit" placeholder="Limit">
+    <button onclick="getPopularWords()">Get Popular Words</button>
+</div>
+
+<div class="api-form">
+    <h3>Popular Words2 API</h3>
+    <input type="text" id="city2" placeholder="City Name">
+    <input type="number" id="limit2" placeholder="Limit">
+    <button onclick="getPopularWords2()">Get Popular Words2</button>
+</div>
+
+<!-- Substitute Words API -->
+<div class="api-form">
+    <h3>Substitute Words API</h3>
+    <input type="text" id="originalWord" placeholder="Original Word">
+    <input type="text" id="newWord" placeholder="New Word">
+    <button onclick="substituteWord()">Substitute Word</button>
+</div>
+
+<!-- Response -->
+<div class="response" id="response"></div>
+
+<script>
+    function getPopularWords() {
+        const city = document.getElementById('city').value;
+        const limit = document.getElementById('limit').value;
+
+        fetch(`/popular_words?city=${city}&limit=${limit}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function getPopularWords2() {
+        const city = document.getElementById('city2').value;
+        const limit = document.getElementById('limit2').value;
+
+        fetch(`/popular_words2?city=${city}&limit=${limit}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function substituteWord() {
+        const originalWord = document.getElementById('originalWord').value;
+        const newWord = document.getElementById('newWord').value;
+
+        fetch('/substitute_words', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({word: originalWord, substitute: newWord}),
+        })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+
+</script>
+</body>
+</html>
