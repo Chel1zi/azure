@@ -1,0 +1,162 @@
+[
+    {
+        "city": "Pensacola",
+        "lat": "30.4413",
+        "lng": "-87.1911",
+        "country": "United States",
+        "state": "Florida",
+        "population": "360711"
+    },
+    {
+        "city": "Fort Lauderdale",
+        "lat": "26.1412",
+        "lng": "-80.1464",
+        "country": "United States",
+        "state": "Florida",
+        "population": "182247"
+    },
+    {
+        "city": "Marysville",
+        "lat": "48.0809",
+        "lng": "-122.1561",
+        "country": "United States",
+        "state": "Washington",
+        "population": "164655"
+    },
+    {
+        "city": "Annapolis",
+        "lat": "38.9706",
+        "lng": "-76.5047",
+        "country": "United States",
+        "state": "Maryland",
+        "population": "40581"
+    },
+    {
+        "city": "Eastchester",
+        "lat": "40.9536",
+        "lng": "-73.8133",
+        "country": "United States",
+        "state": "New York",
+        "population": "34207"
+    },
+    {
+        "city": "Elmwood Park",
+        "lat": "41.9225",
+        "lng": "-87.8163",
+        "country": "United States",
+        "state": "Illinois",
+        "population": "24517"
+    },
+    {
+        "city": "Kenmore",
+        "lat": "42.9646",
+        "lng": "-78.8713",
+        "country": "United States",
+        "state": "New York",
+        "population": "15207"
+    },
+    {
+        "city": "Parma",
+        "lat": "41.3843",
+        "lng": "-81.7286",
+        "country": "United States",
+        "state": "Ohio",
+        "population": "80880"
+    },
+    {
+        "city": "Wausau",
+        "lat": "44.9620",
+        "lng": "-89.6459",
+        "country": "United States",
+        "state": "Wisconsin",
+        "population": "76016"
+    },
+    {
+        "city": "Orland Park",
+        "lat": "41.6075",
+        "lng": "-87.8619",
+        "country": "United States",
+        "state": "Illinois",
+        "population": "58622"
+    },
+    {
+        "city": "Bridgewater",
+        "lat": "40.5934",
+        "lng": "-74.6076",
+        "country": "United States",
+        "state": "New Jersey",
+        "population": "46072"
+    },
+    {
+        "city": "Sayreville",
+        "lat": "40.4656",
+        "lng": "-74.3237",
+        "country": "United States",
+        "state": "New Jersey",
+        "population": "45062"
+    },
+    {
+        "city": "Lancaster",
+        "lat": "42.9099",
+        "lng": "-78.6378",
+        "country": "United States",
+        "state": "New York",
+        "population": "44732"
+    },
+    {
+        "city": "Brookfield",
+        "lat": "43.0640",
+        "lng": "-88.1231",
+        "country": "United States",
+        "state": "Wisconsin",
+        "population": "41020"
+    },
+    {
+        "city": "Burton",
+        "lat": "42.9974",
+        "lng": "-83.6175",
+        "country": "United States",
+        "state": "Michigan",
+        "population": "29532"
+    },
+    {
+        "city": "Fridley",
+        "lat": "45.0841",
+        "lng": "-93.2595",
+        "country": "United States",
+        "state": "Minnesota",
+        "population": "29422"
+    },
+    {
+        "city": "New Windsor",
+        "lat": "41.4742",
+        "lng": "-74.1089",
+        "country": "United States",
+        "state": "New York",
+        "population": "27541"
+    },
+    {
+        "city": "Sun City Center",
+        "lat": "27.7150",
+        "lng": "-82.3569",
+        "country": "United States",
+        "state": "Florida",
+        "population": "26920"
+    },
+    {
+        "city": "Mansfield",
+        "lat": "41.7892",
+        "lng": "-72.2287",
+        "country": "United States",
+        "state": "Connecticut",
+        "population": "26431"
+    },
+    {
+        "city": "Holt",
+        "lat": "42.6416",
+        "lng": "-84.5308",
+        "country": "United States",
+        "state": "Michigan",
+        "population": "25755"
+    }
+]
